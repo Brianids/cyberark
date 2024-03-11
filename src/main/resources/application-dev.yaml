@@ -1,0 +1,14 @@
+spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          cyberark-saml:
+            assertingparty:
+              entity-id: ${ENTITY_ID}
+              verification:
+                credentials:
+                   - certificate-location: "${CERTIFICATE_LOCATION}"
+              singlesignon:
+                url: ${URL_SSO}
+                sign-request: false   
